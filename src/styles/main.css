@@ -1,0 +1,205 @@
+.title {
+  margin: 2rem 0 4rem 0;
+  font-family: "Playwrite BR", cursive;
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 0px 0px 5px black;
+  position: relative;
+}
+.title::before,
+.title::after {
+  content: "*";
+  font-size: 4rem;
+  color: var(--yellow);
+  animation: star 500ms infinite alternate-reverse;
+  position: absolute;
+}
+.title::before {
+  top: -1.25rem;
+  left: -2.5rem;
+}
+.title::after {
+  right: -2.5rem;
+  bottom: -6.25rem;
+}
+
+.gameContainer {
+  width: 100%;
+  max-width: 22rem;
+  margin: 0 auto 2rem auto;
+}
+
+.menu {
+  display: none; /* Alterado na seção "javascript" mais abaixo */
+}
+
+.menu p {
+  margin-bottom: 3rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  color: var(--gray);
+}
+
+.menu p span {
+  font-weight: bold;
+}
+
+.menu > span {
+  display: block;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--gray);
+}
+
+.menu div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.menu img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.game {
+  display: none; /* Alterado na seção "javascript" mais abaixo */
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: min-content auto min-content;
+  justify-items: left;
+  gap: 1rem;
+}
+
+.controls button {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+}
+
+.nextMove {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.nextMove span {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+.nextMove img {
+  height: 1.375rem;
+}
+
+.back {
+  justify-self: end;
+}
+
+.back img {
+  width: 1.25rem;
+}
+
+.reset img {
+  width: 1.25rem;
+}
+
+.reset {
+  justify-self: end;
+  overflow: hidden;
+  position: relative;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 7rem 7rem 7rem;
+  grid-template-rows: 7rem 7rem 7rem;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.field {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  transition: 300ms;
+  -webkit-tap-highlight-color: transparent;
+}
+.field:hover,
+.field:focus {
+  background-color: var(--lightYellow);
+  transform: scale(1.02);
+}
+.field:disabled {
+  background-color: var(--tranparentWhite);
+  transform: initial;
+}
+.field:active {
+  background-color: var(--lightYellow);
+  transform: scale(0.9);
+}
+
+.field img {
+  width: 100%;
+  height: 100%;
+  animation: emerge 500ms;
+}
+
+.svgLine {
+  pointer-events: none;
+  position: absolute;
+}
+
+.svgLine line {
+  stroke: var(--yellow);
+  stroke-width: 10;
+  stroke-linecap: round;
+  animation: fade 0.3s;
+}
+
+.creditsContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Nunito";
+  color: white;
+  padding-bottom: 1rem;
+}
+
+.creditsContainer a {
+  color: white;
+}
+
+/* -------- Javascript -------- */
+.menu.js-visible {
+  display: block;
+}
+
+.game.js-visible {
+  display: block;
+}
+
+/* -------- Responsivo -------- */
+@media (max-width: 800px) {
+  .field {
+    transition: 150ms;
+  }
+  .field:active {
+    transform: scale(0.95);
+  }
+}

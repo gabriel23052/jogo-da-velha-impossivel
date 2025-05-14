@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-title" content="Velha" />
+  <meta name="description" content="Um simples jodo-da-velha contra a máquina, no caso... Impossível de ser vencido sem trapaças... Não faça isso, é feio.">
+  <meta name="robots" content="index, noimageindex">
+  <meta name="language" content="PT-BR">
+  <title>Jogo da Velha</title>
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="./src/styles/style.css">
+</head>
+
+<body>
+  <!----- <Tictactoe> ----->
+  <h1 class="title">Jogo da velha</h1>
+  <!----- <GameContainer> ----->
+  <section class="gameContainer">
+    <!----- <Menu> ----->
+    <section class="menu gs-defaultContainer js-visible ">
+      <p>Jogue o clássico <span>jogo-da-velha</span> contra a máquina e tente vencer!.. Bom... Na verdade... <span>É impossível vencer 😐</span>... A não ser que você <span>trapaceie</span>, mas não esqueça de se <span>sentir mal por isso 😀</span>.</p>
+      <span>Selecione seu símbolo (o X começa):</span>
+      <div class="symbolSelect">
+        <button class="gs-button" symbol="1">
+          <img src="./x.svg" alt="X">
+        </button>
+        <button class="gs-button" symbol="2">
+          <img src="./circle.svg" alt="Circle">
+        </button>
+      </div>
+    </section>
+    <!----- </Menu> ----->
+    <!----- <Game> ----->
+    <section class="game">
+      <div class="controls gs-defaultContainer">
+        <div class="nextMove">
+          <span>Próximo:</span>
+          <img src="./x.svg" width="22" height="22">
+        </div>
+        <button class="back gs-button">
+          <img src="./back.svg" alt="Voltar" width="20" height="17">
+        </button>
+        <button class="reset gs-button">
+          <img src="./reset.svg" alt="Reiniciar" width="20" height="23">
+        </button>
+      </div>
+      <div class="fields">
+        <button class="field gs-defaultContainer" pos="0"></button>
+        <button class="field gs-defaultContainer" pos="1"></button>
+        <button class="field gs-defaultContainer" pos="2"></button>
+        <button class="field gs-defaultContainer" pos="3"></button>
+        <button class="field gs-defaultContainer" pos="4"></button>
+        <button class="field gs-defaultContainer" pos="5"></button>
+        <button class="field gs-defaultContainer" pos="6"></button>
+        <button class="field gs-defaultContainer" pos="7"></button>
+        <button class="field gs-defaultContainer" pos="8"></button>
+        <svg width="100%" height="100%" class="svgLine" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+    </section>
+    <!----- </Game> ----->
+    <!----- </GameContainer> ----->
+  </section>
+  <div class="creditsContainer">
+    <span class="credits">Desenvolvido por Gabriel Pereira</span>
+    <a href="https://github.com/gabriel23052" rel="external" target="_blank">Acesse meu Github</a>
+  </div>
+  <!----- </TicTacToe> ----->
+  <script src="src/main.js" type="module"></script>
+</body>
+
+</html>
